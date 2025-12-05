@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!--
+   Robyn Brown
+   sitemap.html
+   2025-12-03
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Robyn Brown</title>
+  <meta name="description"
+    content="Sitemap for Robyn Brown portfolio website with all primary pages and sitemap structure.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
+</head>
+
+<header class="site-header">
+  <div class="wrapper">
+    <figure class="profile-figure" aria-label="Profile photo">
+      <img src="images/headshot.jpg" alt="Robyn Brown portrait" class="profile-photo">
+
+
+      <figcaption class="profile-caption alt-style">
+        <span>Pedantic Pens</span> — crafting beautiful experiences in code and images.
+      </figcaption>
+    </figure>
+  </div>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">About / Contact</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle menu"
+      aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- main: portfolio content -->
+<main class="site-main wrapper">
+  <!-- PURPOSE: Gallery and project case-studies -->
+  <h1 class="page-title">Selected Work</h1>
+
+  <section class="portfolio-grid">
+    <article class="portfolio-item card">
+      <img src="images/recipe-app.png" alt="Interactive Recipe App screenshot">
+      <h3>Interactive Recipe App</h3>
+      <p>Accessible UI, offline-first notes, semantic HTML structure. Tools: HTML, CSS, JS.</p>
+      <p><a href="#" title="Read case study">Read case study →</a></p>
+    </article>
+
+    <article class="portfolio-item card">
+      <img src="images/onboarding.png" alt="Onboarding flow screenshot">
+      <h3>Onboarding Rewrite</h3>
+      <p>Content-first rewrite of the flow that reduced friction and improved clarity.</p>
+      <p><a href="#" title="Read case study">Read case study →</a></p>
+    </article>
+
+    <article class="portfolio-item card">
+      <img src="images/editorial.png" alt="Editorial series cover">
+      <h3>Editorial Series</h3>
+      <p>Longform pieces combining photography and product storytelling.</p>
+    </article>
+  </section>
+
+  <section style="margin-top:1rem;">
+    <h2 class="section-title">Photography Gallery</h2>
+    <div class="featured-grid">
+      <article class="card"><img src="images/landscape.jpg" alt="Landscape">
+        <h3>Landscape</h3>
+      </article>
+      <article class="card"><img src="images/portrait.jpg" alt="Portrait">
+        <h3>Portrait</h3>
+      </article>
+      <article class="card"><img src="images/streetscape.jpg" alt="Street">
+        <h3>Street</h3>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>&copy; 2025 Robyn Brown — <span class="footer-social"> <a href="https://www.linkedin.com" target="_blank"
+          rel="noopener noreferrer"><img src="images/linkedin.png" alt="LinkedIn"></a></span></p>
+  </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+
+</html>

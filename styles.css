@@ -1,0 +1,440 @@
+/* styles.css
+   Robyn Brown
+   styles.css
+   2025-12-03
+*/
+
+/* ---------------------------
+   CSS RESET
+   Remove default margins/paddings and normalize major elements
+--------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture {
+  max-width: 100%;
+  /* responsive images */
+  display: block;
+  /* remove inline gap and allow centering */
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 10px
+}
+
+ol {
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------------------------
+   Google Font
+--------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300&display=swap');
+
+:root {
+  --bg: #f6f4f1;
+  --card: #ffffff;
+  --muted: #6b6b6b;
+  --accent: #5a2a2f;
+  /* burgundy */
+  --accent-2: #c66d42;
+  /* warm orange */
+  --shadow: rgba(30, 30, 30, 0.08);
+  --max-width: 1100px;
+  --radius: 10px;
+}
+
+/* ---------------------------
+   Base layout
+--------------------------- */
+body {
+  font-family: 'Open Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: 16px;
+  color: #222;
+  background: var(--bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* wrapper */
+.wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---------------------------
+   Header / Nav
+ --------------------------- */
+header.site-header {
+  background-image: url('../images/banner-1200.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 6px 18px var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* figure with portrait and caption */
+header .profile-figure {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.25rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+/* Profile Figure */
+.profile-figure {
+  text-align: center;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile photo */
+
+.profile-caption {
+  margin-top: 18px;
+  padding: 12px 20px;
+  font-weight: 700;
+  color: var(--accent);
+
+  /* Fonts */
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+
+.profile-caption.alt-style {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+}
+
+.profile-photo {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateZ(0);
+}
+
+
+/* nav */
+nav.main-nav {
+  background: rgba(90, 42, 47, 0.96);
+  display: flex;
+  justify-content: center;
+}
+
+nav.main-nav ul {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  align-items: center;
+  width: %;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+nav.main-nav a {
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 700;
+  display: inline-block;
+  transition: transform .18s ease, background .18s ease;
+}
+
+nav.main-nav a:hover {
+  background: var(--accent-2);
+  transform: translateY(-2px);
+  /* transform */
+}
+
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: transparent;
+  border: none;
+  gap: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #222;
+  border-radius: 2px;
+}
+
+
+main.site-main {
+  padding: 2rem 1rem;
+}
+
+/* two-column intro grid (mobile-first) */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+
+/* cards (projects / highlights) */
+.card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+/* headline styles */
+h1.page-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2.section-title {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  color: var(--muted);
+}
+
+/* featured grid using CSS Grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+/* portfolio grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* portfolio item */
+.portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-item h3 {
+  margin-top: 0.5rem;
+}
+
+.portfolio-item p {
+  color: var(--muted);
+}
+
+/* aside area (about/contact snippet) */
+aside.contact-card {
+  background: linear-gradient(180deg, var(--card), #fff);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* table of skills / experience */
+.table-responsive {
+  overflow: auto;
+  margin: 1rem 0;
+  background: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+}
+
+table.skills {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.skills th,
+table.skills td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+table.skills th {
+  background: linear-gradient(90deg, #fafafa, #fff);
+  font-weight: 700;
+}
+
+/* hide table on narrow screens and provide list alternative */
+@media (max-width:520px) {
+  table.skills {
+    display: none;
+  }
+
+  .skills-list {
+    display: block;
+  }
+}
+
+.skills-list {
+  display: none;
+  margin: 1rem 0;
+}
+
+/* form styles */
+form.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+button.btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+button.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(90, 42, 47, 0.12);
+}
+
+/* audio element block */
+.media-audio {
+  margin: 1rem 0;
+  background: linear-gradient(90deg, #fff, #fafafa);
+  padding: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* blockquote styling + symbol ::before */
+blockquote.quote-box {
+  position: relative;
+  padding: 1rem 1.2rem;
+  background: #fff;
+  border-radius: 8px;
+  font-style: italic;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* footer */
+footer.site-footer {
+  margin-top: 2rem;
+  padding: 1.4rem 0;
+  text-align: center;
+  color: var(--muted);
+  width:50%;
+  margin-left: 25%;
+}
+
+/* social icon */
+.footer-social img {
+  width: 28px;
+  height: auto;
+  vertical-align: middle;
+  filter: grayscale(0.05);
+  transition: transform .12s ease;
+}
+
+.footer-social img:hover {
+  transform: translateY(-3px);
+}
+
+/* ---------------------------
+   MEDIA QUERIES: tablet and desktop
+--------------------------- */
+@media (min-width: 601px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-grid {
+    grid-template-columns: 1.2fr .8fr;
+  }
+}
+
+@media (min-width: 992px) {
+  nav.main-nav ul {
+    gap: 1rem;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* hide mobile hamburger on desktop */
+}
+
+/* accessibility focus */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(90, 42, 47, 0.15);
+  outline-offset: 3px;
+}

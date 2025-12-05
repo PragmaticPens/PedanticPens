@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!--
+   Robyn Brown
+   index.html
+   2025-12-03
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robyn Brown — Developer & Photographer</title>
+  <meta name="description"
+    content="Robyn Brown — web developer and photographer. Portfolio showcasing development projects, photography, and contact information.">
+
+  <!-- Google Fonts (Montserrat + Fira Sans Condensed) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fira+Sans+Condensed:wght@300;600&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrapper">
+      <figure class="profile-figure" aria-label="Profile photo">
+        <img src="images/headshot.jpg" alt="Robyn Brown portrait" class="profile-photo">
+        <figcaption class="profile-caption alt-style">
+          Pedantic Pens — crafting beautiful experiences in code and images.
+        </figcaption>
+      </figure>
+    </div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">About / Contact</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- main: primary content of the page -->
+  <main class="site-main wrapper">
+    <!-- PURPOSE: This main holds the home page hero, featured items, and call-to-action -->
+    <section class="intro-grid">
+      <article class="card">
+        <h1 class="page-title">Hi — I'm Robyn</h1>
+        <p>I’m a new web developer and photographer. I design and build accessible, responsive websites and shoot photos
+          that emphasize mood and story.</p>
+
+        <p><a class="btn" href="portfolio.html">View portfolio →</a></p>
+        <blockquote class="quote-box">
+          <p>Clear interfaces and strong visuals share the same foundation: thoughtful composition.</p>
+          <p style="font-size:0.9rem; color:#666; margin-top:0.6rem">— Robyn</p>
+        </blockquote>
+      </article>
+
+      <aside class="contact-card card">
+        <h2>Quick Facts</h2>
+        <ul>
+          <li>Location: Denver, CO</li>
+          <li>Focus: Front-end, HTML/CSS, JavaScript</li>
+          <li>Photography: Portraits, landscapes, editorial</li>
+        </ul>
+
+        <h2 style="margin-top:0.8rem">Listen</h2>
+        <div class="media-audio">
+          <audio controls>
+            <source src="media/porfolio-pod.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <p style="font-size:0.9rem; color:var(--muted)">Email: <a
+            href="mailto:robyn@pedanticpens.com">robyn@pedanticpens.com</a></p>
+      </aside>
+    </section>
+
+    <section>
+      <h2 class="section-title">Featured Work</h2>
+
+      <div class="featured-grid">
+        <article class="card portfolio-item">
+          <img src="images/recipe-app.png" alt="Screenshot of Interactive Recipe App">
+          <h3>Interactive Recipe App</h3>
+          <p>A React-style, accessible single-page concept focused on offline-first UX.</p>
+        </article>
+
+        <article class="card portfolio-item">
+          <img src="images/onboarding.png" alt="Onboarding UX screenshot">
+          <h3>Onboarding Rewrite</h3>
+          <p>Content-first onboarding that increased completion in testing scenarios.</p>
+        </article>
+
+        <article class="card portfolio-item">
+          <img src="images/editorial.png" alt="Editorial longform cover image">
+          <h3>Editorial Series</h3>
+          <p>Longform product stories and case studies combining copy and visuals.</p>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top:1rem;">
+      <h2 class="section-title">Skills & Experience</h2>
+
+      <div class="table-responsive card">
+        <table class="skills">
+          <thead>
+            <tr>
+              <th>Skill</th>
+              <th>Years</th>
+              <th>Proficiency</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML & Semantic Markup</td>
+              <td>3</td>
+              <td>Advanced</td>
+            </tr>
+            <tr>
+              <td>CSS & Responsive Design</td>
+              <td>3</td>
+              <td>Advanced</td>
+            </tr>
+            <tr>
+              <td>JavaScript (ES6+)</td>
+              <td>2</td>
+              <td>Intermediate</td>
+            </tr>
+            <tr>
+              <td>Photography</td>
+              <td>4</td>
+              <td>Advanced</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- alternative for mobile when table hidden -->
+        <div class="skills-list" aria-hidden="true">
+          <ol>
+            <li>HTML & Semantic Markup — 3 years</li>
+            <li>CSS & Responsive Design — 3 years</li>
+            <li>JavaScript (ES6+) — 2 years</li>
+            <li>Photography — 4 years</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>&copy; 2025 Robyn Brown — <span class="footer-social">Find me on <a href="https://www.linkedin.com"
+            target="_blank" rel="noopener noreferrer"><img src="images/linkedin.png" alt="LinkedIn"></a></span></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
